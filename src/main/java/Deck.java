@@ -1,10 +1,12 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Deck {
     private ArrayList<Card> deck;
 
-    public Deck(ArrayList<Card> deck) {
-        this.deck = deck;
+    public Deck() {
+        this.deck = new ArrayList<>();
+        populateDeck();
     }
 
     public int countCards() {
@@ -24,4 +26,11 @@ public class Deck {
     public Card getCardAtIndex(int index) {
         return this.deck.get(index);
     }
+
+    public Card dealCard() {
+        Collections.shuffle(deck);
+        return deck.remove(0);
+
+    }
+
 }

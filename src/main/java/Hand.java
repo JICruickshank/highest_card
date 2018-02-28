@@ -2,12 +2,10 @@ import java.util.ArrayList;
 
 public class Hand {
     private ArrayList<Card> hand;
-    private int totalScore;
 
-    public Hand(ArrayList<Card> hand) {
+    public Hand() {
 
-        this.hand = hand;
-        this.totalScore = 0;
+        this.hand = new ArrayList<>();
     }
 
     public int countCards() {
@@ -24,4 +22,10 @@ public class Hand {
         }
         return total;
     }
+
+    public void addCard(Card card) {
+        this.hand.add(card);
+    }
+
+
 }

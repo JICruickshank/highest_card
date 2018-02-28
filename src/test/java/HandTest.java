@@ -12,21 +12,24 @@ public class HandTest {
 
     @Before
     public void before() {
+        hand = new Hand();
         ArrayList<Card> cards = new ArrayList<>();
         clubsFive = new Card(SuitType.CLUBS, ValueType.FIVE);
-        cards.add(clubsFive);
         diamondsEight = new Card(SuitType.DIAMONDS, ValueType.EIGHT);
-        cards.add(diamondsEight);
-        hand = new Hand(cards);
     }
 
     @Test
-    public void hasCards() {
+    public void canAddCardToHand() {
+        hand.addCard(clubsFive);
+        hand.addCard(diamondsEight);
         assertEquals(2, hand.countCards());
     }
 
     @Test
     public void canGetScore() {
+        hand.addCard(clubsFive);
+        hand.addCard(diamondsEight);
         assertEquals(13, hand.getTotalScore());
     }
+
 }
