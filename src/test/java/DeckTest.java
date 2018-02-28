@@ -12,13 +12,24 @@ public class DeckTest {
     @Before
     public void before() {
         ArrayList<Card> cards = new ArrayList<>();
-        card = new Card(SuitType.HEARTS, ValueType.JACK);
-        cards.add(card);
-        Deck deck = new Deck(cards);
+        deck = new Deck(cards);
+        card = new Card(SuitType.DIAMONDS, ValueType.EIGHT);
     }
 
     @Test
     public void hasNoCards() {
         assertEquals(0, deck.countCards());
     }
+
+    @Test
+    public void haveFullDeck() {
+        assertEquals(52, deck.countCards());
+    }
+
+    //    @Test
+//    public void canAddCard() {
+//        deck.addCard(card);
+//        assertEquals(1, deck.countCards());
+//    }
+
 }
