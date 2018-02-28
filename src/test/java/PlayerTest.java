@@ -1,12 +1,13 @@
 import org.junit.Before;
 
+import java.util.ArrayList;
+
 public class PlayerTest {
-    Player playerOne;
-    Player playerTwo;
 
     @Before
     public void before() {
-        playerOne = new Player();
-        playerTwo = new Player();
+        ArrayList<Card> cards = new ArrayList<>();
+        Hand hand = new Hand(cards);
+        Player playerOne = new Player(hand, "J");
     }
 }

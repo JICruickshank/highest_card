@@ -10,8 +10,6 @@ public class HandTest {
     Card clubsFive;
     Card diamondsEight;
 
-
-
     @Before
     public void before() {
         ArrayList<Card> cards = new ArrayList<>();
