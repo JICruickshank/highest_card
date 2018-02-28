@@ -11,17 +11,17 @@ public class Deck {
         return this.deck.size();
     }
 
-//    public void addCard(card) {
-//        this.deck.add(card);
-//    }
-
     public void populateDeck() {
         for (SuitType suit : SuitType.values()) {
             for (ValueType value : ValueType.values()) {
-                Card card = new Card(SuitType suit, ValueType value);
+                Card card = new Card(suit, value);
                 this.deck.add(card);
             }
 
         }
+    }
+
+    public Card getCardAtIndex(int index) {
+        return this.deck.get(index);
     }
 }

@@ -22,4 +22,9 @@ public class CardTest {
     public void cardHasScore() {
         assertEquals(10, card.getScore());
     }
+
+    @Test
+    public void cardHasValueType() {
+        assertEquals(ValueType.JACK, card.getValueType());
+    }
 }
