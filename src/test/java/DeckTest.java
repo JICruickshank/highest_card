@@ -17,7 +17,7 @@ public class DeckTest {
     }
 
     @Test
-    public void hasAllSuits() {
+    public void hasAllCards() {
         assertEquals(SuitType.DIAMONDS, deck.getCardAtIndex(20).getSuitType());
         assertEquals(ValueType.EIGHT, deck.getCardAtIndex(20).getValueType());
         assertEquals(SuitType.HEARTS, deck.getCardAtIndex(10).getSuitType());
